@@ -1,5 +1,15 @@
 // Your code goes here
 
+// change fun bus logo
+const funLogo = document.getElementById('logo');
+
+function titleChange() {
+  funLogo.style.fontSize = '72px'
+  funLogo.style.fontWeight = 'bold'
+  funLogo.style.color = 'yellow'
+}
+funLogo.addEventListener('click', titleChange)
+
 // mouse over to change top logo image
 const topLogo = document.getElementById('top-logo');
 
@@ -13,6 +23,22 @@ function changeBack(event) {
   topLogo.src = "img/fun-bus.jpg"
 }
 topLogo.addEventListener('wheel', changeBack);
+
+// on click zoom image
+const adventure = document.getElementById('adventure');
+
+function adventureZoom() {
+  adventure.style.transform = 'scale(1.25)'
+}
+adventure.addEventListener('click', adventureZoom)
+
+// click to rotate image
+const boat = document.getElementById('boat');
+
+function boatRotate() {
+  boat.style.transform = 'rotate(90deg)'
+}
+boat.addEventListener('click', boatRotate)
 
 // drag and drop for P tags bottom section
 const draggables = document.querySelectorAll('.draggable');
@@ -50,9 +76,9 @@ window.addEventListener("resize", () => {
   document.getElementById('text').innerHTML = Math.random()
 })
 
-// load
+// on load
 window.addEventListener('load', (event) => {
-  alert('page is fully loaded');
+  alert('What are you doing?');
 });
 
 
